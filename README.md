@@ -9,6 +9,7 @@ and lifelike facial images from latent space representations.
 (GIF may take a few seconds to load)
 
 Generated Faces during the training process.
+
 ![training_dcgan_on_celeba](https://github.com/TomGoesGitHub/Human-Faces-with-DCGANs/assets/81027049/5799a0ef-f002-4b02-ab9b-b0b522530adf)
 
 ## Dataset

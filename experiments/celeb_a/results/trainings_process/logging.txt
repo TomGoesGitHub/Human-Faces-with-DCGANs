@@ -1,0 +1,172 @@
+Found 202599 files belonging to 1 classes.
+Die letzten 5000 Zeilen der Streamingausgabe wurden abgeschnitten.
+  inflating: img_align_celeba/img_align_celeba/197605.jpg  
+  inflating: img_align_celeba/img_align_celeba/197606.jpg  
+  inflating: img_align_celeba/img_align_celeba/197607.jpg  
+  inflating: img_align_celeba/img_align_celeba/197608.jpg  
+  inflating: img_align_celeba/img_align_celeba/197609.jpg  
+  inflating: img_align_celeba/img_align_celeba/197610.jpg  
+  inflating: img_align_celeba/img_align_celeba/197611.jpg  
+  inflating: img_align_celeba/img_align_celeba/197612.jpg  
+  inflating: img_align_celeba/img_align_celeba/197613.jpg  
+  inflating: img_align_celeba/img_align_celeba/197614.jpg  
+  inflating: img_align_celeba/img_align_celeba/197615.jpg  
+  inflating: img_align_celeba/img_align_celeba/197616.jpg  
+  inflating: img_align_celeba/img_align_celeba/197617.jpg  
+  inflating: img_align_celeba/img_align_celeba/197618.jpg  
+  inflating: img_align_celeba/img_align_celeba/197619.jpg  
+  inflating: img_align_celeba/img_align_celeba/197620.jpg  
+  inflating: img_align_celeba/img_align_celeba/197621.jpg  
+  inflating: img_align_celeba/img_align_celeba/197622.jpg  
+  inflating: img_align_celeba/img_align_celeba/197623.jpg  
+  inflating: img_align_celeba/img_align_celeba/197624.jpg  
+  inflating: img_align_celeba/img_align_celeba/197625.jpg  
+  inflating: img_align_celeba/img_align_celeba/197626.jpg  
+  inflating: img_align_celeba/img_align_celeba/197627.jpg  
+  inflating: img_align_celeba/img_align_celeba/197628.jpg  
+...
+  inflating: list_attr_celeba.csv    
+  inflating: list_bbox_celeba.csv    
+  inflating: list_eval_partition.csv  
+  inflating: list_landmarks_align_celeba.csv  
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+Mounted at /content/gdrive
+Model: "generator"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ reshape (Reshape)           (None, 1, 1, 100)         0         
+                                                                 
+ conv2d_transpose (Conv2DTr  (None, 4, 4, 1024)        1638400   
+ anspose)                                                        
+                                                                 
+ batch_normalization (Batch  (None, 4, 4, 1024)        4096      
+ Normalization)                                                  
+                                                                 
+ re_lu (ReLU)                (None, 4, 4, 1024)        0         
+                                                                 
+ cnn_block_1 (Sequential)    (None, 8, 8, 512)         13109248  
+|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
+| conv2d_transpose_1 (Conv2  (None, 8, 8, 512)         13107200 |
+| DTranspose)                                                   |
+|                                                               |
+| batch_normalization_1 (Ba  (None, 8, 8, 512)         2048     |
+| tchNormalization)                                             |
+|                                                               |
+| re_lu_1 (ReLU)             (None, 8, 8, 512)         0        |
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ cnn_block_2 (Sequential)    (None, 16, 16, 256)       3277824   
+...
+Total params: 72183818 (275.36 MB)
+Trainable params: 72172294 (275.32 MB)
+Non-trainable params: 11524 (45.02 KB)
+_________________________________________________________________
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+
+Epoch 1/100
+792/792 [==============================] - 2457s 3s/step - Cross-Entropy: 0.8894 - E[p(y=real|x=real)]: 0.4924 - E[p(y=fake|x=fake)]: 0.6778 - Historical-Averaging-Penalty: 0.5965
+
+Epoch 2/100
+792/792 [==============================] - 2419s 3s/step - Cross-Entropy: 0.5455 - E[p(y=real|x=real)]: 0.6533 - E[p(y=fake|x=fake)]: 0.8238 - Historical-Averaging-Penalty: 0.1396
+
+Epoch 3/100
+792/792 [==============================] - 2420s 3s/step - Cross-Entropy: 0.3876 - E[p(y=real|x=real)]: 0.7534 - E[p(y=fake|x=fake)]: 0.8948 - Historical-Averaging-Penalty: 0.0653
+
+Epoch 4/100
+792/792 [==============================] - 2422s 3s/step - Cross-Entropy: 0.3909 - E[p(y=real|x=real)]: 0.7406 - E[p(y=fake|x=fake)]: 0.8802 - Historical-Averaging-Penalty: 0.0527
+
+Epoch 5/100
+792/792 [==============================] - 2423s 3s/step - Cross-Entropy: 0.4073 - E[p(y=real|x=real)]: 0.7295 - E[p(y=fake|x=fake)]: 0.8656 - Historical-Averaging-Penalty: 0.0569
+
+Epoch 6/100
+792/792 [==============================] - 2423s 3s/step - Cross-Entropy: 0.3896 - E[p(y=real|x=real)]: 0.7253 - E[p(y=fake|x=fake)]: 0.8562 - Historical-Averaging-Penalty: 0.0417
+
+Epoch 7/100
+792/792 [==============================] - 2422s 3s/step - Cross-Entropy: 0.3788 - E[p(y=real|x=real)]: 0.7209 - E[p(y=fake|x=fake)]: 0.8501 - Historical-Averaging-Penalty: 0.0360
+
+Epoch 8/100
+792/792 [==============================] - 2423s 3s/step - Cross-Entropy: 0.3698 - E[p(y=real|x=real)]: 0.7129 - E[p(y=fake|x=fake)]: 0.8389 - Historical-Averaging-Penalty: 0.0304
+
+Epoch 9/100
+792/792 [==============================] - 2420s 3s/step - Cross-Entropy: 0.3905 - E[p(y=real|x=real)]: 0.6854 - E[p(y=fake|x=fake)]: 0.8143 - Historical-Averaging-Penalty: 0.0285
+
+Epoch 10/100
+792/792 [==============================] - 2421s 3s/step - Cross-Entropy: 0.4319 - E[p(y=real|x=real)]: 0.6446 - E[p(y=fake|x=fake)]: 0.7822 - Historical-Averaging-Penalty: 0.0279
+
+Epoch 11/100
+792/792 [==============================] - 2420s 3s/step - Cross-Entropy: 0.4773 - E[p(y=real|x=real)]: 0.6047 - E[p(y=fake|x=fake)]: 0.7568 - Historical-Averaging-Penalty: 0.0290
+
+Epoch 12/100
+792/792 [==============================] - 2420s 3s/step - Cross-Entropy: 0.5038 - E[p(y=real|x=real)]: 0.5808 - E[p(y=fake|x=fake)]: 0.7451 - Historical-Averaging-Penalty: 0.0307
+
+Epoch 13/100
+792/792 [==============================] - 2419s 3s/step - Cross-Entropy: 0.5182 - E[p(y=real|x=real)]: 0.5655 - E[p(y=fake|x=fake)]: 0.7406 - Historical-Averaging-Penalty: 0.0317
+
+Epoch 14/100
+792/792 [==============================] - 2416s 3s/step - Cross-Entropy: 0.5261 - E[p(y=real|x=real)]: 0.5567 - E[p(y=fake|x=fake)]: 0.7388 - Historical-Averaging-Penalty: 0.0320
+
+Epoch 15/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5303 - E[p(y=real|x=real)]: 0.5505 - E[p(y=fake|x=fake)]: 0.7381 - Historical-Averaging-Penalty: 0.0310
+
+Epoch 16/100
+792/792 [==============================] - 2417s 3s/step - Cross-Entropy: 0.5301 - E[p(y=real|x=real)]: 0.5471 - E[p(y=fake|x=fake)]: 0.7410 - Historical-Averaging-Penalty: 0.0311
+
+Epoch 17/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5331 - E[p(y=real|x=real)]: 0.5427 - E[p(y=fake|x=fake)]: 0.7415 - Historical-Averaging-Penalty: 0.0303
+
+Epoch 18/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5332 - E[p(y=real|x=real)]: 0.5401 - E[p(y=fake|x=fake)]: 0.7427 - Historical-Averaging-Penalty: 0.0291
+
+Epoch 19/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5331 - E[p(y=real|x=real)]: 0.5370 - E[p(y=fake|x=fake)]: 0.7451 - Historical-Averaging-Penalty: 0.0288
+
+Epoch 20/100
+792/792 [==============================] - 2420s 3s/step - Cross-Entropy: 0.5347 - E[p(y=real|x=real)]: 0.5339 - E[p(y=fake|x=fake)]: 0.7463 - Historical-Averaging-Penalty: 0.0292
+
+Epoch 21/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5373 - E[p(y=real|x=real)]: 0.5305 - E[p(y=fake|x=fake)]: 0.7455 - Historical-Averaging-Penalty: 0.0279
+
+Epoch 22/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5400 - E[p(y=real|x=real)]: 0.5270 - E[p(y=fake|x=fake)]: 0.7443 - Historical-Averaging-Penalty: 0.0273
+
+Epoch 23/100
+792/792 [==============================] - 2420s 3s/step - Cross-Entropy: 0.5415 - E[p(y=real|x=real)]: 0.5249 - E[p(y=fake|x=fake)]: 0.7443 - Historical-Averaging-Penalty: 0.0269
+
+Epoch 24/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5409 - E[p(y=real|x=real)]: 0.5231 - E[p(y=fake|x=fake)]: 0.7469 - Historical-Averaging-Penalty: 0.0268
+
+Epoch 25/100
+792/792 [==============================] - 2419s 3s/step - Cross-Entropy: 0.5421 - E[p(y=real|x=real)]: 0.5205 - E[p(y=fake|x=fake)]: 0.7485 - Historical-Averaging-Penalty: 0.0268
+
+Epoch 26/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5408 - E[p(y=real|x=real)]: 0.5199 - E[p(y=fake|x=fake)]: 0.7508 - Historical-Averaging-Penalty: 0.0266
+
+Epoch 27/100
+792/792 [==============================] - 2422s 3s/step - Cross-Entropy: 0.5400 - E[p(y=real|x=real)]: 0.5186 - E[p(y=fake|x=fake)]: 0.7541 - Historical-Averaging-Penalty: 0.0270
+
+Epoch 28/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5374 - E[p(y=real|x=real)]: 0.5184 - E[p(y=fake|x=fake)]: 0.7571 - Historical-Averaging-Penalty: 0.0252
+
+Epoch 29/100
+792/792 [==============================] - 2417s 3s/step - Cross-Entropy: 0.5370 - E[p(y=real|x=real)]: 0.5169 - E[p(y=fake|x=fake)]: 0.7602 - Historical-Averaging-Penalty: 0.0265
+
+Epoch 30/100
+792/792 [==============================] - 2420s 3s/step - Cross-Entropy: 0.5354 - E[p(y=real|x=real)]: 0.5161 - E[p(y=fake|x=fake)]: 0.7627 - Historical-Averaging-Penalty: 0.0254
+
+Epoch 31/100
+792/792 [==============================] - 2421s 3s/step - Cross-Entropy: 0.5367 - E[p(y=real|x=real)]: 0.5143 - E[p(y=fake|x=fake)]: 0.7632 - Historical-Averaging-Penalty: 0.0256
+
+Epoch 32/100
+792/792 [==============================] - 2418s 3s/step - Cross-Entropy: 0.5349 - E[p(y=real|x=real)]: 0.5139 - E[p(y=fake|x=fake)]: 0.7660 - Historical-Averaging-Penalty: 0.0245
+
+Epoch 33/100
+792/792 [==============================] - 2417s 3s/step - Cross-Entropy: 0.5360 - E[p(y=real|x=real)]: 0.5125 - E[p(y=fake|x=fake)]: 0.7669 - Historical-Averaging-Penalty: 0.0258
+
+Epoch 34/100
+792/792 [==============================] - 2417s 3s/step - Cross-Entropy: 0.5348 - E[p(y=real|x=real)]: 0.5119 - E[p(y=fake|x=fake)]: 0.7687 - Historical-Averaging-Penalty: 0.0245
+
+Epoch 35/100
+792/792 [==============================] - 2417s 3s/step - Cross-Entropy: 0.5332 - E[p(y=real|x=real)]: 0.5113 - E[p(y=fake|x=fake)]: 0.7716 - Historical-Averaging-Penalty: 0.0245
+
+Epoch 36/100
+352/792 [============>.................] - ETA: 22:21 - Cross-Entropy: 0.5334 - E[p(y=real|x=real)]: 0.5112 - E[p(y=fake|x=fake)]: 0.7708 - Historical-Averaging-Penalty: 0.0238

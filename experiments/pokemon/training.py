@@ -3,7 +3,7 @@ import sys
 
 sys.path.append(os.path.join(os.pardir, os.pardir))
 from gan import GenerativeAdversarialNetwork
-from experiments.pokemon.architecture import generator, discriminator
+from experiments.pokemon.architecture3 import generator, discriminator
 from experiments.utils import VisualizeGeneratedFakesCallback
 from experiments.pokemon.utils import PokemonDataLoader
 
